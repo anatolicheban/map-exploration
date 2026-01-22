@@ -1,0 +1,42 @@
+.mapSelector {
+  position: fixed;
+  z-index: 2;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .wrapper {
+    display: flex;
+    gap: 16px;
+    > div {
+      width: 80px;
+      height: 80px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: opacity 0.25s;
+      font-size: 14px;
+      &:hover {
+        opacity: 0.8;
+      }
+      > img {
+        width: 20px;
+      }
+    }
+  }
+}
