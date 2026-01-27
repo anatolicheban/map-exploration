@@ -61,7 +61,7 @@ export const CityMap: FC<Props> = ({
     mapRef.current.flyTo({
       center: [point.lng, point.lat],
       zoom: 15,
-      speed: 0.8,
+      duration: 1000,
     });
   }, [point]);
 

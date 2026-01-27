@@ -8,7 +8,7 @@ import {
   Button,
 } from "antd";
 import { type MapPoint, Route, type RouteDirection } from "@/types";
-import type { FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import {
   LeftOutlined,
   RightOutlined,
@@ -33,7 +33,16 @@ export const PointModal: FC<Props> = ({
   route,
   onSetModalOpen,
 }) => {
-  if (!point) return null;
+  const [currentPoint, setCurrentPoint] = useState<MapPoint | null>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentPoint(point);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [point]);
+
+  if (!currentPoint) return null;
 
   return (
     <Modal
@@ -41,7 +50,7 @@ export const PointModal: FC<Props> = ({
         <Space orientation="vertical" size={2}>
           <Space wrap>
             <Typography.Text strong style={{ fontSize: 16 }}>
-              {point.title}
+              {currentPoint.title}
             </Typography.Text>
             {/*<Tag color={ROUTES_COLORS[point.route]}>*/}
             {/*{ROUTE_LABEL[point.route]}*/}
@@ -71,10 +80,10 @@ export const PointModal: FC<Props> = ({
       destroyOnHidden
     >
       {/* Images */}
-      {point.images?.length ? (
+      {currentPoint.images?.length ? (
         <>
           <Carousel dots draggable>
-            {point.images.map((src) => (
+            {currentPoint.images.map((src) => (
               <div
                 key={src}
                 style={{
@@ -87,7 +96,7 @@ export const PointModal: FC<Props> = ({
               >
                 <Image
                   src={src}
-                  alt={point.title}
+                  alt={currentPoint.title}
                   preview={false}
                   styles={{
                     root: {
@@ -113,35 +122,35 @@ export const PointModal: FC<Props> = ({
 
       {/* Description */}
       <Typography.Paragraph style={{ marginBottom: 0, whiteSpace: "pre-wrap" }}>
-        {point.desc}
+        {currentPoint.desc}
       </Typography.Paragraph>
 
       {/* Address */}
-      {point.address && (
+      {currentPoint.address && (
         <>
           <Divider />
           <div>
             <Typography.Text>Адреса / Орієнтир:</Typography.Text>{" "}
             <Typography.Link
               style={{ textDecoration: "underline" }}
-              href={`https://www.google.com/maps?q=${point.lat},${point.lng}`}
+              href={`https://www.google.com/maps?q=${currentPoint.lat},${currentPoint.lng}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {point.address}
+              {currentPoint.address}
             </Typography.Link>
           </div>
         </>
       )}
 
       {/* Video */}
-      {point.video ? (
+      {currentPoint.video ? (
         <>
           <Divider />
           <Typography.Text type="secondary">Video</Typography.Text>
           <div style={{ marginTop: 8 }}>
             <video
-              src={point.video}
+              src={currentPoint.video}
               controls
               style={{ width: "100%", borderRadius: 12 }}
             />
