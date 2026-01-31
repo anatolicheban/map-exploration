@@ -60,6 +60,7 @@ import {
   interesting05x1,
   interesting05x2,
   interesting05x3,
+  interesting06x1,
   interesting07x1,
   interesting07x2,
   interesting07x3,
@@ -185,7 +186,7 @@ export const POINTS_IMAGES: Record<Route, (string[] | undefined)[]> = {
     [interesting03x1, interesting03x2, interesting03x3, interesting03x4],
     [interesting04x1],
     [interesting05x1, interesting05x2, interesting05x3],
-    undefined,
+    [interesting06x1],
     [
       interesting07x1,
       interesting07x2,

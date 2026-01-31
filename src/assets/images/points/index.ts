@@ -71,6 +71,8 @@ export { default as interesting05x1 } from "./interesting/05/1.png";
 export { default as interesting05x2 } from "./interesting/05/2.png";
 export { default as interesting05x3 } from "./interesting/05/3.png";
 
+export { default as interesting06x1 } from "./interesting/06/1.jpg";
+
 export { default as interesting07x1 } from "./interesting/07/1.jpg";
 export { default as interesting07x2 } from "./interesting/07/2.jpg";
 export { default as interesting07x3 } from "./interesting/07/3.jpg";

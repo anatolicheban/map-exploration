@@ -1,10 +1,18 @@
 import "./styles/App.scss";
-import { CityMap, FinishModal, PointModal, RouteSelector } from "@/components";
+import {
+  CityMap,
+  FinishModal,
+  PointModal,
+  RouteSelector,
+  WelcomeScreen,
+} from "@/components";
 import { useAppEffects } from "@/hooks";
 import { useAppSelector, useMainActions } from "@/store/hooks";
+import { useState } from "react";
 
 function App() {
   useAppEffects();
+  const [welcomeOpen, setWelcomeOpen] = useState(true);
 
   const { point, route, modalOpen, isFinish } = useAppSelector(
     (state) => state.main,
@@ -13,6 +21,10 @@ function App() {
 
   return (
     <>
+      <WelcomeScreen
+        open={welcomeOpen}
+        onStart={() => setWelcomeOpen(false)}
+      />
       <PointModal
         route={route}
         modalOpen={modalOpen}

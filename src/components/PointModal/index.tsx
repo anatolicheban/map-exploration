@@ -129,6 +129,22 @@ export const PointModal: FC<Props> = ({
         </ReactMarkdown>
       </Typography.Paragraph>
 
+      {/* Test Link */}
+      {currentPoint.testLink && (
+        <div
+          style={{ marginTop: 16, display: "flex", justifyContent: "center" }}
+        >
+          <Button
+            type="primary"
+            href={currentPoint.testLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Пройди тестування для отримання призу
+          </Button>
+        </div>
+      )}
+
       {/* Address */}
       {currentPoint.address && (
         <>
@@ -146,21 +162,6 @@ export const PointModal: FC<Props> = ({
           </div>
         </>
       )}
-
-      {/* Video */}
-      {currentPoint.video ? (
-        <>
-          <Divider />
-          <Typography.Text type="secondary">Video</Typography.Text>
-          <div style={{ marginTop: 8 }}>
-            <video
-              src={currentPoint.video}
-              controls
-              style={{ width: "100%", borderRadius: 12 }}
-            />
-          </div>
-        </>
-      ) : null}
     </Modal>
   );
 };

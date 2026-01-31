@@ -13,7 +13,8 @@ export type MapPoint = {
   address?: string;
   desc: string;
   images: string[];
-  video?: string;
+  isFinish?: boolean;
+  testLink?: string;
 };
 
 export type RouteDirection = "next" | "prev";

@@ -113,14 +113,10 @@ export const CityMap: FC<Props> = ({
                   }}
                 />
               </Source>
-              {points.map((el, i, array) => {
+              {points.map((el, i) => {
                 return (
                   <Marker key={i} longitude={el.lng} latitude={el.lat}>
-                    <MapMarker
-                      isEnd={i + 1 === array.length}
-                      isStart={i === 0}
-                      point={el}
-                    />
+                    <MapMarker isStart={i === 0} point={el} />
                   </Marker>
                 );
               })}
