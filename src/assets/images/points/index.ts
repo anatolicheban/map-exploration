@@ -54,6 +54,39 @@ export { default as historical09x2 } from "./historical/09/2.png";
 export { default as historical09x3 } from "./historical/09/3.webp";
 export { default as historical09x4 } from "./historical/09/4.png";
 
+export { default as interesting01x1 } from "./interesting/01/1.png";
+export { default as interesting01x2 } from "./interesting/01/2.png";
+
+export { default as interesting02x1 } from "./interesting/02/1.png";
+export { default as interesting02x2 } from "./interesting/02/2.png";
+
+export { default as interesting03x1 } from "./interesting/03/1.png";
+export { default as interesting03x2 } from "./interesting/03/2.png";
+export { default as interesting03x3 } from "./interesting/03/3.png";
+export { default as interesting03x4 } from "./interesting/03/4.png";
+
+export { default as interesting04x1 } from "./interesting/04/1.png";
+
+export { default as interesting05x1 } from "./interesting/05/1.png";
+export { default as interesting05x2 } from "./interesting/05/2.png";
+export { default as interesting05x3 } from "./interesting/05/3.png";
+
+export { default as interesting07x1 } from "./interesting/07/1.jpg";
+export { default as interesting07x2 } from "./interesting/07/2.jpg";
+export { default as interesting07x3 } from "./interesting/07/3.jpg";
+export { default as interesting07x4 } from "./interesting/07/4.jpg";
+export { default as interesting07x5 } from "./interesting/07/5.jpg";
+export { default as interesting07x6 } from "./interesting/07/6.jpg";
+export { default as interesting07x7 } from "./interesting/07/7.jpg";
+export { default as interesting07x8 } from "./interesting/07/8.jpg";
+
+export { default as interesting08x1 } from "./interesting/08/1.jpg";
+
+export { default as interesting09x1 } from "./interesting/09/1.jpg";
+export { default as interesting09x2 } from "./interesting/09/2.jpg";
+
+export { default as interesting10x1 } from "./interesting/10/1.jpg";
+
 export { default as military01x1 } from "./military/01/1.png";
 export { default as military01x2 } from "./military/01/2.png";
 export { default as military01x3 } from "./military/01/3.png";

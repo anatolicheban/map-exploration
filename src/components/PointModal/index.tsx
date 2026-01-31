@@ -14,6 +14,8 @@ import {
   RightOutlined,
   CheckCircleOutlined,
 } from "@ant-design/icons";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { MAP_POINTS } from "@/data";
 
 type Props = {
@@ -121,8 +123,10 @@ export const PointModal: FC<Props> = ({
       ) : null}
 
       {/* Description */}
-      <Typography.Paragraph style={{ marginBottom: 0, whiteSpace: "pre-wrap" }}>
-        {currentPoint.desc}
+      <Typography.Paragraph style={{ marginBottom: 0 }}>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {currentPoint.desc}
+        </ReactMarkdown>
       </Typography.Paragraph>
 
       {/* Address */}

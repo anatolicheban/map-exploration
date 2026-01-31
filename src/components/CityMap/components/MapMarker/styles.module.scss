@@ -7,6 +7,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  @media (max-width: 768px) {
+    width: 17px;
+    height: 17px;
+  }
   img {
     width: 60%;
     height: 60%;

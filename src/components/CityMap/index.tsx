@@ -31,8 +31,8 @@ const OSM_RASTER_STYLE = {
 } as const;
 
 export const CityMap: FC<Props> = ({
-  center = { lng: 29.92381740713698, lat: 50.6414228448425 },
-  zoom = 11,
+  center = { lng: 29.93281740713698, lat: 50.6414228448425 },
+  zoom = 12.7,
 }) => {
   const mapRef = useRef<MapRef>(null);
   const { point, isFinish } = useAppSelector((state) => state.main);
@@ -108,7 +108,7 @@ export const CityMap: FC<Props> = ({
                   paint={{
                     //@ts-ignore
                     "line-color": ROUTES_COLORS[route],
-                    "line-width": 4,
+                    "line-width": 3,
                     "line-opacity": 0.9,
                   }}
                 />

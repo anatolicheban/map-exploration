@@ -16,7 +16,9 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-map-gl": "^8.1.0",
+    "react-markdown": "^10.1.0",
     "react-redux": "^9.2.0",
+    "remark-gfm": "^4.0.1",
     "sass": "^1.97.2"
   },
   "devDependencies": {
