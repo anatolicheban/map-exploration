@@ -4,6 +4,10 @@ import {
   historical01x1,
   historical08x1,
   interesting07x1,
+  interesting02x2,
+  interesting05x2,
+  interesting02x1,
+  interesting03x2,
   military01x1,
 } from "@assets/images/points";
 
@@ -14,7 +18,16 @@ type Props = {
 
 export const WelcomeScreen = ({ open, onStart }: Props) => {
   const backgroundImage = useMemo(() => {
-    const images = [historical01x1, historical08x1, interesting07x1, military01x1];
+    const images = [
+      historical01x1,
+      historical08x1,
+      interesting07x1,
+      military01x1,
+      interesting02x2,
+      interesting05x2,
+      interesting02x1,
+      interesting03x2,
+    ];
     return images[Math.floor(Math.random() * images.length)];
   }, []);
 
@@ -38,12 +51,16 @@ export const WelcomeScreen = ({ open, onStart }: Props) => {
         }}
       >
         <Space orientation="vertical" size={16} style={{ width: "100%" }}>
-          <Typography.Title level={3} style={{ margin: 0, textAlign: "center" }}>
+          <Typography.Title
+            level={3}
+            style={{ margin: 0, textAlign: "center" }}
+          >
             Вітаємо у Бородянці!
           </Typography.Title>
           <Typography.Paragraph style={{ margin: 0, textAlign: "center" }}>
             Обери маршрут і вирушай у подорож місцями, які зберігають історію,
-            памʼять та силу нашої громади.
+            памʼять та силу нашої громади. Під час прогулянки будь уважним до
+            свого оточення та дотримуйся правил безпеки.
           </Typography.Paragraph>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button
@@ -57,6 +74,18 @@ export const WelcomeScreen = ({ open, onStart }: Props) => {
           </div>
         </Space>
       </div>
+      <Typography.Paragraph
+        style={{
+          fontSize: 12,
+          textAlign: "center",
+          marginTop: 12,
+          fontStyle: "italic",
+          marginBottom: -8,
+        }}
+      >
+        Реалізовано за підтримки Aspen Institute Kyiv у межах програми Aspen
+        Kyiv Challenge командою Литовсько-Українського ліцею.
+      </Typography.Paragraph>
     </Modal>
   );
 };
